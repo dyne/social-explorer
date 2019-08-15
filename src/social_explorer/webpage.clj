@@ -79,20 +79,24 @@
               "text/html; charset=utf-8"}
     :body (page/html5
            (render-head)
-           [:body.container.grid-lg ;; {:class "static"}
+           [:body ;; {:class "static"}
             header-guest
-            [:div body]
-            (footer)])})
+            [:div.container.grid-lg
+             [:div body]
+             (footer)]])})
   ([account body]
    {:headers {"Content-Type"
               "text/html; charset=utf-8"}
     :body (page/html5
            (render-head)
-           [:body.container.grid-lg (if (empty? account)
-                                      header-guest
-                                      (header-account account))
-            [:div body]
-            (footer)])}))
+           [:body [:div (if (empty? account)
+                         header-guest
+                          (header-account account))
+                   [:div.container.grid-lg
+                    [:div body]
+                    (footer)]]]
+
+           )}))
 
 
 (defn render-error

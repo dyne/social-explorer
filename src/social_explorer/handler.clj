@@ -20,7 +20,7 @@
             [compojure.route :as route]
             [failjure.core :as f]
             [mount.core :as mount]
-
+            [social-explorer.components.petitions :refer [petitions]]
             [social-explorer.webpage :as web]
             [social-explorer.config :refer [config] :as c]
             [social-explorer.swapi :as swapi]
@@ -33,7 +33,11 @@
 
 (defroutes app-routes
 
-(GET "/" [] (web/render [:div "this is the body yo!"]))
+(GET "/" request
+     (let [{{:keys [page per-page]} :params} request]
+       (web/render (petitions (c/get-swapi-params) (cond-> {}
+                                                         page (assoc :page page)
+                                                         per-page (assoc :per-page per-page))))))
 
   (route/resources "/")
   (route/not-found "<h1>Page not found</h1>"))
