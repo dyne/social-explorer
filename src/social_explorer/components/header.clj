@@ -4,15 +4,8 @@
 
 (def header-guest
   [:header.navbar.header
-   [:div.navbar-section
-    [:a.bold.navbar-brand.mr-2 {:href "/"} "social wallet"]]
-
-   [:div.navbar-section
-    [:a#login {:class "btn"
-         :href "/login"} " Login"]
-    [:a#signup {:class "btn btn-primary"
-         :href "/signup"} " Sign-up"]]
-
+   [:div.navbar-section.container.grid-lg
+    [:a.bold.navbar-brand.mr-2 {:href "/"} "social explorer"]]
    ])
 
 
@@ -66,5 +59,3 @@
        [:a {:href "/logout" :id "logout"} (t/locale [:navbar :log-out])]]
       ]
      ]]])
-
-   
