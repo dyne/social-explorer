@@ -1,0 +1,270 @@
+
+code {
+	font-size: .8em;
+	/* display: block; */
+	white-space: pre-wrap;
+}
+
+.editor {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* .btn { */
+/* 	margin: 0 1.5em 0 1.5em; */
+/* } */
+
+.edit-project {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+.minwidth {
+	min-width: 150px;
+}
+
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+
+table.sortable td {
+	font-size: .8em;
+	font-family: "arial"
+}
+
+.input-form {
+	clear: right;
+}
+
+table .text-ellipsis {
+	max-width: 150px;
+}
+
+li {
+    /* padding: .5em; */
+}
+
+.secrets {
+	padding: 1em;
+}
+
+.password {
+	font-size: 1.5;
+	padding: 1em;
+	/* display: inline-block; */
+}
+
+
+.navbar-text {
+	margin-top: 22px;
+}
+
+.password .content {
+	font-size: 1em;
+}
+
+.slices {
+
+}
+
+.slices ul {
+	list-style: none;
+}
+
+.slices .content {
+	font-size: .5em;
+}
+
+/* .qrcode {
+    float: left;
+    margin-left: -19px;
+} */
+
+
+
+
+/* UPDATED STYLE */
+.header {
+	background: #f3f3f7;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.header .navbar-section .btn:first-of-type {
+	background: transparent;
+    margin-right: 8px;
+}
+
+.header .navbar-brand {
+	font-weight:  600
+}
+
+.login-card .card-header {
+	text-align: center
+}
+
+
+footer {
+	margin-top: 60px;
+}
+
+footer .navbar-section a img {
+	margin-left: 36px
+}
+
+
+
+.wallet-card {
+	margin-bottom: 16px;
+	background: #7f7fe2;
+	background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
+    border-radius: 16px;
+	padding: 32px;
+}
+
+.wallet-card .avatar {
+	border-radius: 120px;
+	width: 120px;
+	height: 120px;
+}
+
+.wallet-card .panel-title {
+	font-size: 32px;
+	color: white;
+}
+
+.wallet-card .panel-subtitle {
+	font-size: 18px;
+	color: white;
+	margin-top: 8px;
+}
+
+.wallet-card .panel-subtitle i {
+	margin-right: 8px;
+}
+
+.balance {
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.balance h2 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.balance h3 {
+	margin: 0;
+}
+
+.balance h4 {
+	font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.qrcode img {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+
+.feeds {
+	margin-top: 24px;
+	border-radius: 4px;
+	background: #f9f9f9
+}
+
+.feeds .feed {
+	padding: 16px;
+    padding-bottom: 0;
+}
+
+.feed .divider {
+	border-top: .05rem solid #e8e8e8;
+}
+
+.feed p.tile-title {
+	margin-bottom: 0;
+}
+
+.feed p.tile-subtitle {
+	margin: 0;
+}
+
+.feed .text-gray {
+	margin-top: 5px;
+    font-size: 14px;
+    margin-right: 16px;
+}
+
+
+.filter .filter-nav {
+  margin: .4rem 0;
+  padding-top: 16px;
+}
+
+.filter .filter-body {
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.maxwidth {
+	max-width: 200px;
+}
+
+
+.info-login {
+	border: none;
+    background: rgb(245, 248, 250);
+}
+
+.info-login .card-image {
+	margin: 16px;
+}
+
+.info-login .card-image img {
+	width: 300px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 840px) {
+	.card-info {
+		display: block;
+		float: none !important;
+	}
+
+	
+	.qrcode {
+		margin: 0 auto;
+		float: none !important;
+		width: 250px;
+		text-align: center;
+		height: 250px;
+		display: block;
+	}
+  }
