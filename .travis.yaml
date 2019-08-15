@@ -1,0 +1,13 @@
+dist: trusty
+language: clojure
+lein: 2.8.1
+before_script:
+   - ./scripts/run_swapi.sh &
+   - sleep 60
+script: lein midje
+jdk:
+  - oraclejdk8
+  - openjdk8
+  - oraclejdk9
+services:
+  - mongod

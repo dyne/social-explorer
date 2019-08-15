@@ -1,0 +1,16 @@
+log-level: debug
+
+webserver:
+  security:
+      anti-forgery: false
+      ssl-redirect: false
+  session:
+      cookie-attrs:
+        # this number is the time in seconds until the session expires
+        max-age: 600
+        # change this to true for https only on production
+        secure: false
+swapi:
+  base-url: "http://localhost:3000/wallet/v1"
+  apikey-file: "../social-wallet-api/apikey.yaml"
+  apikey-name: "device-id"
