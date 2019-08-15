@@ -30,7 +30,7 @@
                        [:div.item_date "26 jan 2019"]
                        ]
                       [:div.item_actions
-                       [:a.btn.btn-primary "Details"]
+                       [:a.btn.btn-primary {:href (str "/petition/" (:header_signature p))} "Details"]
                        ]
                       ]
                      )

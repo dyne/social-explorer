@@ -21,6 +21,7 @@
             [failjure.core :as f]
             [mount.core :as mount]
             [social-explorer.components.petitions :refer [petitions]]
+            [social-explorer.components.petition :refer [petition]]
             [social-explorer.webpage :as web]
             [social-explorer.config :refer [config] :as c]
             [social-explorer.swapi :as swapi]
@@ -38,6 +39,10 @@
        (web/render (petitions (c/get-swapi-params) (cond-> {}
                                                          page (assoc :page page)
                                                          per-page (assoc :per-page per-page))))))
+
+  (GET "/petition/:petitionId" request
+       (web/render (petition))
+       )
 
   (route/resources "/")
   (route/not-found "<h1>Page not found</h1>"))
