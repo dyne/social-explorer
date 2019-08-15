@@ -102,11 +102,9 @@ li {
 
 /* UPDATED STYLE */
 .header {
-	background: #f3f3f7;
     margin-top: 24px;
-    margin-bottom: 16px;
-    padding: 8px;
-    border-radius: 4px;
+    padding-bottom: 16px;
+		border-bottom: 1px solid #dadada59
 }
 
 .header .navbar-section .btn:first-of-type {
@@ -251,6 +249,67 @@ footer .navbar-section a img {
     margin-top: 16px;
 }
 
+.hero_petitions {
+	height: 340px;
+	background: #f8f9f9;
+  padding: 8px;
+  border-radius: 4px;
+	align-items: center;
+	align-content: center;
+  display: flex;
+	margin-bottom: 40px;
+  margin-top: 40px;
+	background-image: url("/static/img/petitions.jpeg");
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.hero_content {
+	width: 460px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hero_title {
+	color: white;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.list_item {
+	display: flex;
+  background: #f8f9f9;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+	align-items: center;
+}
+
+.item_info {
+	flex: 1;
+}
+
+
+.list_title {
+	font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #0000007d;
+}
+
+.item_title {
+	margin-bottom: 4px;
+  font-size: 18px;
+  max-width: 460px;
+}
+
+.item_date {
+	font-size: 14px;
+color: #00000045;
+font-weight: 500;
+}
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 840px) {
 	.card-info {
@@ -258,7 +317,7 @@ footer .navbar-section a img {
 		float: none !important;
 	}
 
-	
+
 	.qrcode {
 		margin: 0 auto;
 		float: none !important;
