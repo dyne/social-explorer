@@ -87,8 +87,8 @@
   (swapi-request {:swapi-params swapi-params
                   :endpoint "transactions/list"
                   :json (json/write-str
-                         (cond-> {:connection "mongo"
-                                  :type "db-only"}
+                         (cond-> {:connection "sawtooth"
+                                  :type "blockchain-and-db"}
                            (:account params) (assoc :account-id (:account params))
                             (not (empty? (:tags params))) (assoc :tags (:tags params))
                            (:page params) (assoc :page (Long/parseLong (:page params)))
