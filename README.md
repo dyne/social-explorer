@@ -1,6 +1,6 @@
 # Social explorer
 
-A generic social explorer UI which uses the social-wallet-api for a backend and sawroom as ledger
+A generic social explorer UI which uses the social-wallet-api for backend and sawroom as ledger
 
 <a href="https://www.dyne.org"><img
 src="https://zenroom.dyne.org/img/software_by_dyne.png"
