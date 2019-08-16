@@ -90,9 +90,17 @@
                          (cond-> {:connection "sawtooth"
                                   :type "blockchain-and-db"}
                            (:account params) (assoc :account-id (:account params))
-                            (not (empty? (:tags params))) (assoc :tags (:tags params))
-                           (:page params) (assoc :page (Long/parseLong (:page params)))
-                           (:per-page params) (assoc :page (Long/parseLong (:per-page params)))))
+                            (:txid params) (assoc :txid (:txid params))
+                                 ))
+                  :body-parse-fn #(-> % :body (json/read-str :key-fn keyword))}))
+
+(defn get-transaction [swapi-params params]
+  (swapi-request {:swapi-params swapi-params
+                  :endpoint "transactions/get"
+                  :json (json/write-str
+                         (cond-> {:connection "sawtooth"
+                                  :type "blockchain-and-db"}
+                           (:txid params) (assoc :txid (:txid params))))
                   :body-parse-fn #(-> % :body (json/read-str :key-fn keyword))}))
 
 (defn list-tags [swapi-params params]
