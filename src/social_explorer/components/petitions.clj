@@ -10,14 +10,23 @@
   (f/attempt-all [response (swapi/list-transactions swapi-params (cond-> {}
                                                                          query-params (merge query-params)))
                   petitions (:data response)
+                  link (atom {})
                   ]
 
                  [:div
                   [:div.hero_petitions
                    [:div.hero_content
                     [:h3.hero_title "Search a petition"]
-                    [:input.form-input {:placeholder "Type the petitionId..."}]
-
+                    [:form {:action "/searchpetition"
+                            :method "post"}
+                     [:div.has-icon-right
+                       [:i.form-icon.icon.icon-search]
+                      [:input.form-input
+                       {:type "text"
+                        :id "petitionId"
+                        :name "petitionId"
+                        :placeholder "Type the petitionId..."}
+                       ]]]
                     ]
                    ]
 
