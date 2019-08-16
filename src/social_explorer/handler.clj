@@ -18,6 +18,7 @@
 (ns social-explorer.handler
   (:require [compojure.core :refer [defroutes routes GET POST]]
             [compojure.route :as route]
+            [ring.util.response :refer [redirect]]
             [failjure.core :as f]
             [mount.core :as mount]
             [social-explorer.components.petitions :refer [petitions]]
@@ -40,9 +41,16 @@
                                                          page (assoc :page page)
                                                          per-page (assoc :per-page per-page))))))
 
-  (GET "/petition/:petitionId" request
-       (web/render (petition))
-       )
+(GET "/petition/:id" request
+ (let [{{:keys [id]} :route-params} request]
+   (web/render (petition (c/get-swapi-params) id)))
+ )
+
+(POST "/searchpetition" request
+  (let [{{:keys [petitionId]} :params} request]
+    (redirect (str "/petition/" petitionId))
+    )
+  )
 
   (route/resources "/")
   (route/not-found "<h1>Page not found</h1>"))
