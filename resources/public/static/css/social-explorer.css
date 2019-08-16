@@ -270,6 +270,17 @@ footer .navbar-section a img {
 	text-align: center;
 }
 
+.hero_content .submit {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	opacity: 0;
+}
+
+.hero_content i {
+	right: 0.3rem
+}
+
 .hero_title {
 	color: white;
 text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
@@ -307,6 +318,78 @@ text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 	font-size: 14px;
 color: #00000045;
 font-weight: 500;
+}
+
+.hero_petition {
+	height: 250px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background: #7f7fe2;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	color: white;
+	border-radius: 6px;
+}
+
+.petition_info h5 {
+	font-size: 16px;
+  max-width: 600px
+}
+
+.details_payload {
+	padding: 16px;
+  background: #f7f1f7;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.payload_title {
+	font-size: 24px;
+  font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.payload_section {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-bottom: 4px solid white;
+}
+
+.payload_section_title {
+	font-size: 14px;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.payload_item {
+	margin-bottom: 16px;
+  overflow-x: hidden;
+  margin-top: 16px;
+}
+
+.details_header h6 {
+	font-size: 24px;
+font-weight: 600;
+margin-bottom: 16px;
+}
+
+
+.payload_item .detail_title {
+
+}
+
+.detail_item {
+	padding: 16px 0;
+  border-bottom: 1px solid;
+  margin-top: 16px;
+}
+
+.detail_title {
+	text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 
