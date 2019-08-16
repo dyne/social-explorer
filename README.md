@@ -8,7 +8,7 @@ alt="software by Dyne.org"
 title="software by Dyne.org" class="pull-right"></a>
 
 ## Getting Started
-To run the social explorer you need an instance of sawroom up and running as well as an instance of SWAPI connected to it.
+To run the social explorer you need an instance of [sawroom](https://github.com/DECODEproject/Sawroom) up and running as well as an instance of [SWAPI](https://github.com/Commonfare-net/social-wallet-api) connected to it.
 
 ### Sawroom
 A docker image of sawromm can be found here https://github.com/dyne/docker-dyne-software/tree/master/sawroom
@@ -25,6 +25,10 @@ Some tweaks are needed to connect swapi to sawroom atm.
 - Build and release locally `sawtooth-sdk-signing` dependency
 - `git checkout 0a95835`
 - `lein ring server`
+
+### Social explorer
+Configure the `config.yaml` file 
+`lein run`
 
 ## License
 
