@@ -27,8 +27,8 @@ Some tweaks are needed to connect swapi to sawroom atm.
 - `lein ring server`
 
 ### Social explorer
-Configure the `config.yaml` file 
-`lein run`
+- Configure the `config.yaml` file 
+- `lein run`
 
 ## License
 
