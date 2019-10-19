@@ -11,6 +11,6 @@ webserver:
         # change this to true for https only on production
         secure: false
 swapi:
-  base-url: "http://localhost:3001/wallet/v1"
+  base-url: "http://localhost:3000/wallet/v1"
   apikey-file: "../social-wallet-api/apikey.yaml"
   apikey-name: "device-id"

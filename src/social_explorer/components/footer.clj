@@ -1,20 +1,17 @@
 (ns social-explorer.components.footer)
 
 (defn footer []
-  [:footer
-   [:div.divider]
-   [:div.navbar
-    [:section.navbar-section
-     [:img {:src "/static/img/AGPLv3.png" :style "width: 120px"
-            :alt "Affero GPLv3 License"
-            :title "Affero GPLv3 License"}]
-     [:a {:href "https://www.dyne.org"}
-      [:img {:src "/static/img/swbydyne.png"
-             :alt   "Software by Dyne.org"
-             :style "width: 140px"
-             :title "Software by Dyne.org"}]]]
-
-    [:section.navbar-section
-     [:a {:href "https://github.com/Commonfare-net/social-wallet" :target "blank"} "Github"]]]
-
-    ])
+  [:footer.footer
+   [:div.footer_container.container.grid-lg
+    [:a.logo {:href "https://www.dyne.org"}
+     [:img {:src "/static/img/dyne.png"
+            :alt   "Software by Dyne.org"
+            :title "Software by Dyne.org"}]]
+    [:div.links
+     [:a {:href "https://twitter.com/DyneOrg"
+          :target "blank"} [:img {:src "/static/img/twitter.png"}]]
+     [:a {:href "https://github.com/Commonfare-net/social-wallet"
+          :target "blank"} [:img {:src "/static/img/github.png"}]]
+     
+     ]]
+   ])

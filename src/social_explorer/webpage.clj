@@ -20,7 +20,7 @@
             [clojure.data.csv :as csv]
             [yaml.core :as yaml]
             [taoensso.timbre :as log]
-            [social-explorer.components.header :refer [header-guest header-account]]
+            ; [social-explorer.components.header :refer [header-guest header-account]]
             [social-explorer.components.footer :refer [footer]]
             [social-explorer.components.head :refer [render-head]]
 
@@ -80,8 +80,8 @@
     :body (page/html5
            (render-head)
            [:body ;; {:class "static"}
-            header-guest
-            [:div.container.grid-lg
+            ; header-guest
+            [:div
              [:div body]
              (footer)]])})
   ([account body]
@@ -89,12 +89,13 @@
               "text/html; charset=utf-8"}
     :body (page/html5
            (render-head)
-           [:body [:div (if (empty? account)
-                         header-guest
-                          (header-account account))
-                   [:div.container.grid-lg
-                    [:div body]
-                    (footer)]]]
+           [:body [:div 
+                  ;  (if (empty? account)
+                  ;    header-guest
+                  ;    (header-account account))
+                   
+                   [:div body]
+                   (footer)]]
 
            )}))
 
@@ -132,7 +133,7 @@
   (page/html5 (render-head)
               [:body {:class "fxc static"}
 
-               header-guest
+              ;  header-guest
 
                [:div {:class "container"} body]
 
