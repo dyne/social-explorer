@@ -45,7 +45,7 @@
                         [:th (get-in p [:header :family_version])]
                         [:th.table_item.text-ellipsis [:a {:href (str "/petition/" (:header_signature p))}
                                                        (str (:header_signature p))]]
-                        [:th (get-in p [:header :family_name])]])]]
+                        [:th [:span (get-in p [:header :family_name])]]])]]
                    (if (nil? (:next_position paging))
                      [:div]
                      (pagination limit uri))]]

@@ -372,6 +372,16 @@ footer .footer_container .logo {
 	width: 58px;
 }
 
+th span {
+	background: #ecc84657;
+    padding: 0px 10px;
+    border-radius: 100px;
+    font-variant: all-small-caps;
+    font-size: 16px;
+    height: 24px;
+    display: inline-block;
+    line-height: 22px;
+}
 .item_title {
 	margin-bottom: 4px;
   font-size: 18px;
