@@ -120,7 +120,11 @@ table .text-ellipsis {
 } */
 
 
-
+.form-input {
+	height: 50px;
+	border-radius: 4px;
+	border-color: #fff;
+}
 
 /* UPDATED STYLE */
 .header {
@@ -316,7 +320,6 @@ footer .footer_container .logo {
 }
 
 .hero_content {
-	width: 460px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -334,7 +337,6 @@ footer .footer_container .logo {
 
 .hero_title {
 	color: white;
-text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .list_item {
@@ -440,6 +442,49 @@ margin-bottom: 16px;
 
 .payload_item .detail_title {
 
+}
+
+.icon-search {
+	color: #ecc846;
+	margin-right: 16px;
+}
+
+
+.search {
+	position: absolute;
+    width: 40px;
+    right: 8px;
+    top: 8px;
+	z-index: 9999;
+}
+
+.pagination a {
+	/* font-family: "Source Sans Pro",sans-serif; */
+    font-weight: 700;
+    color: #0f0b06;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+    height: 50px;
+    background-color: #fcfcfd;
+    border-radius: 25px;
+    padding: 0 50px 0 50px;
+    position: relative;
+    -webkit-appearance: none;
+    box-shadow: -5px 5px 0 0 #a9a9a9;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.pagination a:hover {
+	box-shadow: 0 0 0 2px #ecc846;
 }
 
 .detail_item {

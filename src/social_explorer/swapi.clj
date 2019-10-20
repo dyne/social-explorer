@@ -84,14 +84,15 @@
                   :body-parse-fn #(-> % :body)}))
 
 (defn list-transactions [swapi-params params]
+  (println params)
   (swapi-request {:swapi-params swapi-params
                   :endpoint "transactions/list"
                   :json (json/write-str
                          (cond-> {:connection "sawtooth"
-                                  :type "blockchain-and-db"}
-                           (:account params) (assoc :account-id (:account params))
-                            (:txid params) (assoc :txid (:txid params))
-                                 ))
+                                  :type "blockchain-and-db"
+                                  }
+                           (:limit params) (assoc :limit (:limit params))
+                           (:txid params) (assoc :txid (:txid params))))
                   :body-parse-fn #(-> % :body (json/read-str :key-fn keyword))}))
 
 (defn get-transaction [swapi-params params]

@@ -36,10 +36,10 @@
 (defroutes app-routes
 
 (GET "/" request
-     (let [{{:keys [page per-page]} :params} request]
+     (let [{{:keys [limit]} :params} request]
        (web/render (petitions (c/get-swapi-params) (cond-> {}
-                                                         page (assoc :page page)
-                                                         per-page (assoc :per-page per-page))))))
+                                                     limit (assoc :limit limit))
+                              (:uri request)))))
 
 (GET "/petition/:id" request
  (let [{{:keys [id]} :route-params} request]
