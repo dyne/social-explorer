@@ -84,7 +84,6 @@
                   :body-parse-fn #(-> % :body)}))
 
 (defn list-transactions [swapi-params params]
-  (println params)
   (swapi-request {:swapi-params swapi-params
                   :endpoint "transactions/list"
                   :json (json/write-str

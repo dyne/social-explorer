@@ -43,6 +43,7 @@
                  ;; Readable time formatter lib
                  [clj-time "0.15.0"]
                  ;; json
+                 [cheshire "5.9.0"]
                  [org.clojure/data.json "0.2.6"]
 
                  ;; csv

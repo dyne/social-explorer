@@ -12,9 +12,6 @@
                   petitions (:data response)
                   paging (:paging response)]
                  [:div.navbar-section
-                  (println (:next_position paging))
-                  (println (into [] (map #(:header_signature %) petitions)))
-                  (println (some #(= :next_position paging %) (into [] (map #(:header_signature %) petitions))))
                   [:div.hero_petitions
                    [:div.hero_content.container.grid-lg
                     [:div.columns
@@ -32,7 +29,7 @@
                           :placeholder "Search by transaction Id..."}]]]]]]
 
                   [:div.list.container.grid-lg
-                   [:h4.list_title "Petitions list"]
+                   [:h4.list_title "Transactions list"]
                    [:table.table
                     [:thead
                      [:tr

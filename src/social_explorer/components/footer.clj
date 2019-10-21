@@ -12,6 +12,10 @@
           :target "blank"} [:img {:src "/static/img/twitter.png"}]]
      [:a {:href "https://github.com/Commonfare-net/social-wallet"
           :target "blank"} [:img {:src "/static/img/github.png"}]]
-     
-     ]]
-   ])
+     [:script "hljs.initHighlightingOnLoad();"]
+     [:script
+      "var btn = document.getElementById ('copy')
+      new ClipboardJS (btn);"
+      ]]]])
+
+

@@ -23,13 +23,15 @@
     ;; javascript scripts
     ; (page/include-js  "/static/js/jquery-3.2.1.min.js")
     ; (page/include-js  "/static/js/bootstrap.min.js")
-
+    (page/include-js "/static/js/highlight-tomorrow.js")
+    (page/include-js "/static/js/clipboard.js")
+    ; (page/include-js "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js")
     ;; cascade style sheets
-    ; (page/include-css "/static/css/bootstrap.min.css")
     (page/include-css "/static/css/spectre.min.css")
-    (page/include-css "/static/css/spectre.icons.min.css")
-    (page/include-css "/static/css/json-html.css")
     (page/include-css "/static/css/highlight-tomorrow.css")
+    (page/include-css "/static/css/spectre.icons.min.css")
+    ; (page/include-css "/static/css/json-html.css")
+    ; (page/include-css "/static/css/highlight-tomorrow.css")
     (page/include-css "/static/css/formatters-styles/html.css")
     (page/include-css "/static/css/formatters-styles/annotated.css")
     ; (page/include-css "/static/css/fa-regular.min.css")

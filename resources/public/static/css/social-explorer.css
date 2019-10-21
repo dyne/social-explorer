@@ -1,10 +1,4 @@
 
-code {
-	font-size: .8em;
-	/* display: block; */
-	white-space: pre-wrap;
-}
-
 .editor {
 	position: absolute;
 	top: 0;
@@ -395,20 +389,27 @@ font-weight: 500;
 }
 
 .hero_petition {
-	height: 250px;
-	margin-top: 40px;
-	margin-bottom: 40px;
 	background: #7f7fe2;
 	padding: 16px;
 	display: flex;
 	align-items: center;
 	color: white;
-	border-radius: 6px;
+}
+.petition_info {
+	border-top: 1px solid #ffffff29;
+	padding-top: 20px;
 }
 
 .petition_info h5 {
 	font-size: 16px;
   max-width: 600px
+}
+
+.petition_detail h5 {
+	display: inline-block;
+    background: #ffffff29;
+    padding: 2px 8px;
+    border-radius: 2px;
 }
 
 .details_payload {
@@ -450,8 +451,18 @@ margin-bottom: 16px;
 }
 
 
-.payload_item .detail_title {
+.detail_petition {
+	margin-top: 40px;
+}
 
+.petition_info {
+	margin-top: 40px;
+}
+
+.petition_detail h3 {
+	text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .icon-search {
@@ -503,12 +514,98 @@ margin-bottom: 16px;
   margin-top: 16px;
 }
 
+#copy {
+	float: right;
+    margin-top: -25px;
+    background: #25232240;
+    border: 1px solid #ecc846;
+    color: #ecc846;
+}
+
+code {
+	font-size: 14px;
+	font-family: monospace
+}
 .detail_title {
 	text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
 }
 
+.payload pre {
+	margin-top: 24px;
+}
+
+.petition_info_name {
+	border-bottom: 1px solid #fff2;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.hero_petition a {
+	margin-bottom: 24px;
+    margin-top: 24px;
+    border-radius: 3px;
+    padding-left: 24px;
+	padding-right: 24px;
+}
+
+.block {
+	padding: 16px;
+    background: #f7f7ff0d;
+	border-radius: 6px;
+	margin-top: 24px;
+}
+
+.block_title {
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.block_title:before {
+	position: absolute;
+	content: "";
+	height: 4px;
+	display: block;
+	background: #ecc846;
+	left: 0;
+	bottom: -8px;
+	width: 40px;
+}
+.hash_value {
+	font-family: monospace;
+    font-size: 12px;
+}
+
+.zenroom {
+	padding: 16px;
+    background: #f7f7ff0d;
+	border-radius: 6px;
+	margin-top: 24px;
+}
+
+.zenroom h5 {
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+}
+.zenroom h5:before {
+	position: absolute;
+	content: "";
+	height: 4px;
+	display: block;
+	background: #ecc846;
+	left: 0;
+	bottom: -8px;
+	width: 40px;
+}
+
+.zenroom .payload_item {
+	margin-bottom: 0;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 840px) {
