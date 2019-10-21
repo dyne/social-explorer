@@ -10,7 +10,7 @@
     [:div.links
      [:a {:href "https://twitter.com/DyneOrg"
           :target "blank"} [:img {:src "/static/img/twitter.png"}]]
-     [:a {:href "https://github.com/Commonfare-net/social-wallet"
+     [:a {:href "https://github.com/dyne/social-explorer"
           :target "blank"} [:img {:src "/static/img/github.png"}]]
      [:script "hljs.initHighlightingOnLoad();"]
      [:script

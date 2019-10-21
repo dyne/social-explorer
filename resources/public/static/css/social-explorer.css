@@ -547,12 +547,33 @@ code {
 }
 
 .hero_petition a {
-	margin-bottom: 24px;
-    margin-top: 24px;
-    border-radius: 3px;
 	display: flex;
     align-items: center;
-    width: 82px;
+	font-weight: 700;
+    color: #0f0b06;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    background-color: #fcfcfd;
+    border-radius: 25px;
+    padding: 0 30px 0 30px;
+    position: relative;
+    -webkit-appearance: none;
+    box-shadow: -5px 5px 0 0 #a9a9a9;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    /* margin: 0 auto; */
+    margin-bottom: 40px;
+}
+
+.hero_petition a:hover {
+	box-shadow: 0 0 0 2px #ecc846;
 }
 
 .hero_petition a i {
