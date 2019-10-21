@@ -20,26 +20,15 @@
                  [:div
                   [:div.hero_petition
                    [:div.container.grid-lg
-                    [:a.btn {:href "/"} "Back"]
+                    [:a.btn {:href "/"} [:i.icon.icon-arrow-left] "Back"]
                     (if (:petition_id payload)
                       [:div.petition_info_name
                        [:h3 "Petition id"]
                        [:h5 (:petition_id payload)]]
                       [:div])
-
+                    
                     [:h3 "Transaction"]
-                    [:h5.text-ellipsis txid]
-                    ; [:div.petition_info.columns
-                    ;  [:div.petition_detail.column.col-4
-                    ;   [:h3 "Petition id"]
-                    ;   [:h5 (:petition_id payload)]]
-                    ;  [:div.petition_detail.column.col-4
-                    ;   [:h3 "Action"]
-                    ;   [:h5 (:action payload)]]
-                    ;  [:div.petition_detail.column.col-4
-                    ;   [:h3 "Verifier"]
-                    ;   [:h5 (get-in payload [:placeholders :verifier_name])]]]
-                    ]]
+                    [:h5.text-ellipsis txid]]]
                   [:div.detail_petition.container.grid-lg
                    [:div.zenroom
                     [:h5 "zenroom info"]
