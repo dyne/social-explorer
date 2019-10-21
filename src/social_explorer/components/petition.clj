@@ -28,7 +28,7 @@
                       [:div])
                     
                     [:h3 "Transaction"]
-                    [:h5.text-ellipsis txid]]]
+                    [:h5.transactionId txid]]]
                   [:div.detail_petition.container.grid-lg
                    (if (get-in keys [:zenroom :curve])
                      [:div.zenroom

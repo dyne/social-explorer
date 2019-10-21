@@ -536,6 +536,10 @@ code {
 	margin-top: 24px;
 }
 
+.transactionId {
+	word-break: break-all;
+	font-size: 16px;
+}
 .petition_info_name {
 	border-bottom: 1px solid #fff2;
     margin-bottom: 24px;
