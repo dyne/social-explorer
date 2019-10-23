@@ -28,17 +28,22 @@
   (let [opts [["-ho" "--host [webapp host]" "Web app host"
                :default "http://localhost"]
               ["-p" "--port [webapp port]" "Web app port"
-               :default 3003
+               :default 3001
                :parse-fn #(Integer/parseInt %)
                :validate [#(< 0 % 0x10000) "Must be a number between 0 and 65536"]]
-              ["-l" "--link-port [two-authentication link port]" "Authentication links might use a different port than the actual port that the app uses. The reason for this is possible port forwarding (eg. SSL)"
-               :parse-fn #(Integer/parseInt %)
-               :validate [#(< 0 % 0x10000) "Must be a number between 0 and 65536"]]
+              ["-l" "--listen [listening IP address]" "The IP the service is listening to"
+               :default "0.0.0.0"]
+              ["-u" "--url [The app URL]" "The app URL to be used for redirects etc."
+               :default "http://localhost:3001"]
               ["-c" "--config [config file]" "The app config file path"
                :default "config.yaml"]
+              ["-s" "--stub-email [stub email]" "Stub email?"
+               :default false
+               :parse-fn #(Boolean/parseBoolean %)]
               ["-w" "--with-apikey [with apikey]" "Does the swapi need an api key?"
                :default true
                :parse-fn #(Boolean/parseBoolean %)]
+              ["a" "--auth-admin [auth admin]" "Auth admin?"]
               ["-h" "--help"]]]
     (-> (parse-opts args opts)
         :options)))
@@ -51,4 +56,4 @@
 
 
 (comment
-  (mount/start-with-args {:port 3003 :config "config.yaml" :with-apikey true :host "http://localhost" :link-port 3003}))
+  (mount/start-with-args {:port 3001 :config "config.yaml" :with-apikey false :url "http://localhost:3001"}))
