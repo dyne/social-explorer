@@ -1,6 +1,14 @@
 # social explorer
+A multi-purpose blockchain explorer UI which uses the social-wallet-api to fetch data from multiple ledgers.
 
-A generic blockchain explorer UI which uses the social-wallet-api for backend and [sawroom](https://github.com/DECODEproject/Sawroom) as blockchain.
+<img
+src="https://github.com/dyne/social-explorer/blob/master/preview.jpg"
+title="preview">
+
+Current supported blockchains:
+- bitcoin
+- sawtooth hyperledger
+- faircoin
 
 <a href="https://www.dyne.org"><img
 src="https://decode-sawroom-explorer.dyne.org/static/img/dyne.png"
