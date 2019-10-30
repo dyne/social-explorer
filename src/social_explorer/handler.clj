@@ -21,6 +21,7 @@
             [ring.util.response :refer [redirect]]
             [failjure.core :as f]
             [mount.core :as mount]
+            [clojure.string :as str]
             [social-explorer.components.petitions :refer [petitions]]
             [social-explorer.components.petition :refer [petition]]
             [social-explorer.webpage :as web]
@@ -39,11 +40,13 @@
      (let [{{:keys [limit]} :params} request]
        (web/render (petitions (c/get-swapi-params) (cond-> {}
                                                      limit (assoc :limit limit))
-                              (:uri request)))))
+                              (:uri request)
+                              
+                              ))))
 
 (GET "/petition/:id" request
  (let [{{:keys [id]} :route-params} request]
-   (web/render (petition (c/get-swapi-params) id)))
+   (web/render (petition (c/get-swapi-params) id (.valAt (:headers request) "referer"))))
  )
 
 (POST "/searchpetition" request

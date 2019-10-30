@@ -38,7 +38,7 @@
                       [:th "Family name"]]]
                     [:tbody
                      (for [p petitions]
-                       [:tr
+                       [:tr {:id (:header_signature p)}
                         [:th (get-in p [:header :family_version])]
                         [:th.table_item.text-ellipsis [:a {:href (str "/petition/" (:header_signature p))}
                                                        (str (:header_signature p))]]

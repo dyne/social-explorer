@@ -6,7 +6,7 @@
     [taoensso.timbre :as log]
     ))
 
-(defn petition [swapi-params txid]
+(defn petition [swapi-params txid history]
   (f/attempt-all [response (swapi/get-transaction swapi-params (cond-> {}
                                                                  txid (assoc :txid txid)))
                   petition (:data response)
@@ -20,7 +20,7 @@
                  [:div
                   [:div.hero_petition
                    [:div.container.grid-lg
-                    [:a.btn {:href "/"} [:i.icon.icon-arrow-left] "Back"]
+                    [:a.btn {:href (str history "#" txid)} [:i.icon.icon-arrow-left] "Back"]
                     (if (:petition_id payload)
                       [:div.petition_info_name
                        [:h3 "Petition id"]
